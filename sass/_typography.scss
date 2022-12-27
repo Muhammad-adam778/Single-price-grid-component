@@ -1,0 +1,82 @@
+// Import base
+@use "./base" as *;
+
+// => Body
+body {
+  font-family: $karla-font;
+}
+
+// => Box-2 & Box-3
+h3 {
+  font-size: 1.1125rem;
+  color: $light-gray;
+  margin-bottom: $h-margin-bottom;
+}
+
+// => Box-1
+h1 {
+  font-size: 1.4rem;
+  color: $dark-cyan;
+  margin-bottom: $h-margin-bottom;
+}
+h2 {
+  font-size: 1rem;
+  color: $bright-yellow;
+  margin-bottom: $h-margin-bottom;
+}
+p.description {
+  font-size: 0.88125rem;
+  line-height: 1.5rem;
+  margin-bottom: 5px;
+  color: $grayish-blue;
+}
+
+// => Box-2
+p.plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  span:first-child {
+    font-size: 1.6rem;
+    font-weight: $font-bold;
+    color: $light-gray;
+    margin-right: 15px;
+  }
+  span:last-child {
+    font-size: 0.88125rem;
+    color: $light-gray;
+    opacity: 0.6;
+  }
+}
+%p-styles {
+  font-size: 0.88125rem;
+  color: #fff;
+  opacity: 0.9;
+}
+p.hint {
+  @extend %p-styles;
+  margin-bottom: 30px;
+}
+a.sign-up {
+  color: #fff;
+  background-color: $bright-yellow;
+  font-weight: $font-bold;
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  box-shadow: 0 1px 10px hsl(179deg 67% 34%);
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.85;
+  }
+  user-select: none;
+}
+
+// => Box-3
+p.advantages {
+  @extend %p-styles;
+  line-height: 1.3rem;
+}

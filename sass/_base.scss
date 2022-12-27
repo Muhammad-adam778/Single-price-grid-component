@@ -1,0 +1,54 @@
+// Mixins
+// => Breakpoints
+@mixin breakpoints($point) {
+  @if ($point == "mobile") {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if ($point == "small") {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if ($point == "medium") {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if ($point == "large") {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($point == "small+") {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($point == "medium+") {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else {
+    @error " '#{$point}' Is Invalid Screen Breakpoint";
+  }
+}
+// =======================================================================
+
+// Variables
+// => Colors
+$dark-cyan: hsl(179, 62%, 43%);
+$light-cyan: hsl(179deg 47% 52%);
+$bright-yellow: hsl(71, 73%, 54%);
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+// => Font Family
+$karla-font: "Karla", sans-serif;
+
+// => Font Weight
+$font-regular: 400;
+$font-bold: 700;
+
+// => Padding
+$box-padding: 25px;
+
+// => Margin
+$h-margin-bottom: 16px;
+// =======================================================================
